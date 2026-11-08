@@ -1,17 +1,10 @@
 [package]
-name = "sigmaos-ai"
+name = "sigmaos_ai"
 version = "0.1.0"
 edition = "2021"
-authors = ["SigmaOS Project"]
-description = "AI and ML integration"
-license = "GPL-3.0-or-later"
-repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-ai"
-readme = "README.md"
-keywords = ["ai", "ml", "machine-learning"]
-categories = ["science"]
+license = "MIT"
+description = "SigmaOS ai component inspired by Linux Mint / Omarchy / Arch Linux."
 
-[dependencies]
-sigmaos-kernel = { version = "0.1", path = "../SigmaOS-kernel" }
-
-[profile.release]
-opt-level = 3
+[lib]
+name = "sigmaos_ai"
+path = "src/lib.rs"
