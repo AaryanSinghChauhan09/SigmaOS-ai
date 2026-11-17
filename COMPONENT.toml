@@ -1,7 +1,7 @@
 [component]
 name = "SigmaOS-ai"
 tier = 2
-stability = "scaffold"
+stability = "beta"
 language = "rust"
 description = "AI and machine learning experiments organized as a Rust library. The crate exposes ai and ml modules, including agent and orchestration code, local inference interfaces, quantization helpers, tensor data structures, and training primitives."
 upstream = []
@@ -11,6 +11,6 @@ provides = ["component"]
 depends_on = ["SigmaOS-system"]
 
 [maturity]
-status = "Scaffold"
+status = "Implemented"
 test_evidence = "Compiles and passes AAA unit tests"
 next_milestone = "Hardware and runtime integration"
