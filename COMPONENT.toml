@@ -3,12 +3,12 @@ name = "SigmaOS-ai"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "ai component"
+description = "AI and machine learning experiments organized as a Rust library. The crate exposes ai and ml modules, including agent and orchestration code, local inference interfaces, quantization helpers, tensor data structures, and training primitives."
 upstream = []
 
 [contract]
 provides = ["component"]
-depends_on = []
+depends_on = ["SigmaOS-system"]
 
 [maturity]
 status = "Scaffold"
