@@ -1,65 +1,50 @@
-# SigmaOS-ai Component Wiki
+# SigmaOS-SigmaOS-ai Component Wiki
 
 ## Overview
-SigmaOS-ai provides artificial intelligence and machine learning support for the SigmaOS operating system. It demonstrates the AI subsystem and model inference within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic AI initialization.
+SigmaOS-SigmaOS-ai provides AI and machine learning experiments organized as a Rust library. The crate exposes ai and ml modules, including agent and orchestration code, local inference interfaces, quantization helpers, tensor data structures, and training primitives. for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- AI Abstraction
-- Fail-Fast on AI Initialization Errors
-- Deterministic AI Setup
-- Clear Abstraction Over AI APIs
-- Composition over Inheritance for AI extensions
+- SigmaOS-ai Abstraction
+- Fail-Fast on SigmaOS-ai Initialization Errors
+- Deterministic SigmaOS-ai Setup
+- Clear Abstraction Over SigmaOS-ai APIs
+- Composition over Inheritance for SigmaOS-ai extensions
 
 ## Architecture
-SigmaOS-ai follows an AI pattern:
-- **AI Core**: Provides model inference, tensor operations, and neural network computation
-- **Model Management**: Supports model loading, unloading, and version management
-- **Inference Engine**: Supports forward propagation, batch processing, and result optimization
-- **Error Handling**: Fail-fast on invalid AI configurations or unsupported model types
+SigmaOS-SigmaOS-ai follows a SigmaOS-ai pattern:
+- **SigmaOS-ai Core**: Provides SigmaOS-ai support, SigmaOS-ai management, and SigmaOS-ai tracking
+- **Management**: Supports SigmaOS-ai management, SigmaOS-ai configuration, and SigmaOS-ai lifecycle
+- **Tracking**: Supports SigmaOS-ai status, SigmaOS-ai tracking, and SigmaOS-ai lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-ai configurations or unsupported SigmaOS-ai types
 
 ## API
 The component provides the following public APIs:
-- `ai::infer::model(model, input)` - Perform inference with a given model and input
-- `ai::model::load(path)` - Load a machine learning model from the given path
-- `ai::model::unload(model)` - Unload a machine learning model
-- `ai::status::available()` - Get available AI models and compute status
-- Error types for AI failure scenarios or unsupported model types
+-  - Manage a SigmaOS-ai by given configuration
+-  - Register a SigmaOS-ai by given name
+-  - Get SigmaOS-ai status and SigmaOS-ai availability
+-  - Track SigmaOS-ai management and SigmaOS-ai tracking
+- Error types for SigmaOS-ai failure scenarios or unsupported SigmaOS-ai types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific AI configuration
-2. **Act**: Execute the code under test (model loading, inference)
-3. **Assert**: Verify the expected AI results
+1. **Arrange**: Set up test environment with specific SigmaOS-ai configuration
+2. **Act**: Execute the code under test (SigmaOS-ai init, SigmaOS-ai management)
+3. **Assert**: Verify the expected SigmaOS-ai results
 
 Example:
-```rust
-#[test]
-fn test_ai_infer_aaa() {
-    // Arrange
-    let model = "/models/linear-regression.onnx";
-    let input = vec![1.0, 2.0, 3.0];
-    
-    // Act
-    let result = ai::infer::model(model, input);
-    
-    // Assert
-    assert!(result.is_ok());
-    let prediction = result.unwrap();
-    assert!(prediction.is_valid());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- AI initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all AI failure scenarios
-- Unit tests provided for model loading and inference
-- Integration tests for full AI subsystem with actual model inference
+- Follows Rust best practices with 
+- SigmaOS-ai initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-ai failure scenarios
+- Unit tests provided for SigmaOS-ai management and configuration
+- Integration tests for full SigmaOS-ai system with actual SigmaOS-ai integration
 
 ## TODO
-- Add support for additional model formats (ONNX, TensorFlow, TorchScript)
-- Expand inference capabilities (GPU acceleration, batch processing, model optimization)
-- Add model management features (versioning, loading, unloading, garbage collection)
-- Create integration tests with actual AI model inference systems
-- Implement model persistence and compute resource management
+- Add support for additional SigmaOS-ai types
+- Expand SigmaOS-ai capabilities (SigmaOS-ai features, SigmaOS-ai configurations, SigmaOS-ai tracking)
+- Add lifecycle features (SigmaOS-ai tracking, SigmaOS-ai lifecycle, SigmaOS-ai propagation)
+- Create integration tests with actual SigmaOS-ai systems and SigmaOS-ai integration
+- Implement SigmaOS-ai persistence and SigmaOS-ai state management
